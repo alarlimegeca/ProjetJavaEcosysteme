@@ -3,21 +3,19 @@ package animaux;
 import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
+import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
-import gestion.Gestionnaire;
 
 /**
- * 
- * @author formation
+ * Classe décrivant les hyènes
+ * @author Paul,Armand et Louise 
  *
  */
-
 public class Hyene extends Charognard{
 	/**
 	 * Constructeur
