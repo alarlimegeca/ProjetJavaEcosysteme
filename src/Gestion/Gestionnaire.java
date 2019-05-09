@@ -64,10 +64,34 @@ public class Gestionnaire {
 							animal.seReproduire();										// et se reproduit si il le peut
 						}
 					}
-
+				ListeNomAnimaux.add(Integer.toString(animal.getId()));
 				}
 			}
-		//};
-		//Timer timer = new Timer(); timer.scheduleAtFixedRate(task, 0, 1000); ce bout de code sert à mettre un timer pour que le tour passe au suivant automatiquement
-	//}
+		};
+	String filename="tour_"+Integer.toString(tour);
+	writeToCsvFile(ListeNomAnimaux,";",filename);
+		Timer timer = new Timer(); timer.scheduleAtFixedRate(task, 0, 1000); ce bout de code sert à mettre un timer pour que le tour passe au suivant automatiquement
+	}
+	
+/**
+ * Méthode permettant d'écrire un fichier CSV. Inspirée par le site : https://riptutorial.com/fr/csv/example/27605/lire-et-ecrire-en-java
+ * @param thingsToWrite : Liste des choses que l'on veut écrire dans notre fichier CSV
+ * @param separator : Le séparateur entre les différents éléments écrits dans notre fichier
+ * @param fileName : Le nom de notre fichier
+ */
+public void writeToCsvFile(List<String> thingsToWrite, String separator, String fileName){
+    try (FileWriter writer = new FileWriter(fileName)){
+        for (String strings : thingsToWrite) {
+               writer.append(strings);
+               writer.append(separator);
+               writer.append(System.lineSeparator());
+        }
+        writer.flush();
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+}
+
+
 }
