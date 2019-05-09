@@ -3,7 +3,7 @@ package animaux;
 import java.awt.Color;
 import java.util.ArrayList;
 
-import Gestion.Gestionnaire;
+import gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
@@ -30,7 +30,7 @@ public class Condor extends Charognard{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Condor(int dateNaissance, Case emplacement,  int maturite,
+	public Condor(int dateNaissance, Case emplacement,  boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance, emplacement, maturite,aProcree,meurtFaim);
 

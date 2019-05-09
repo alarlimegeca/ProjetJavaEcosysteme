@@ -3,7 +3,7 @@ package animaux;
 import java.awt.Color;
 import java.util.ArrayList;
 
-import Gestion.Gestionnaire;
+import gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
@@ -30,7 +30,7 @@ public class Crocodile extends Carnivore{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Crocodile(int dateNaissance,  Case emplacement, int maturite,
+	public Crocodile(int dateNaissance,  Case emplacement, boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance, emplacement, maturite,aProcree,meurtFaim);
 

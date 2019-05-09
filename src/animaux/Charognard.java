@@ -25,7 +25,7 @@ public abstract class Charognard extends Animal {
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Charognard(int dateNaissance, Case emplacement,   int maturite,
+	public Charognard(int dateNaissance, Case emplacement,   boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance,emplacement, maturite,aProcree,meurtFaim);
 	}

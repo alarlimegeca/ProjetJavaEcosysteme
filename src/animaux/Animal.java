@@ -2,7 +2,7 @@ package animaux;
 
 import java.awt.Color;
 
-import Gestion.Gestionnaire;
+import gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
@@ -21,7 +21,7 @@ public abstract class Animal {
 	protected int tailleEstomac;
 	private int remplissageEstomac;
 	protected int viande;
-	private int maturite;
+	private boolean maturite;
 	private boolean aProcree;
 	private int meurtFaim;
 
@@ -42,7 +42,7 @@ public abstract class Animal {
 	// il faut changer famine() de place dans les diagrammes de sequence
 	//ca ne sert à rien de faire des tests sur des animaux mort - Paul
 
-	public Animal(int dateNaissance,  Case emplacement,  int maturite,
+	public Animal(int dateNaissance,  Case emplacement,  boolean maturite,
 			boolean aProcree,int meurtFaim) {
 
 		this.id = Gestionnaire.getAnimaux().size() + 1;
@@ -156,11 +156,11 @@ public abstract class Animal {
 		this.viande = viande;
 	}
 
-	public int getMaturite() {
+	public boolean getMaturite() {
 		return this.maturite;
 	}
 
-	public void setMaturite(int maturite) {
+	public void setMaturite(boolean maturite) {
 		this.maturite = maturite;
 	}
 

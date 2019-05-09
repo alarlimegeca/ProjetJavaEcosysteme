@@ -3,7 +3,7 @@ package animaux;
 import java.awt.Color;
 import java.util.ArrayList;
 
-import Gestion.Gestionnaire;
+import gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
@@ -30,7 +30,7 @@ public class Cheval extends Herbivore{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Cheval(int dateNaissance,  Case emplacement, int maturite,
+	public Cheval(int dateNaissance,  Case emplacement, boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance, emplacement, maturite,aProcree,meurtFaim);
 

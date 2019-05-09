@@ -28,7 +28,7 @@ public abstract class Herbivore extends Animal{
 	 * @param meurtFaim
 	 */
 
-	public Herbivore(int dateNaissance,  Case emplacement,   int maturite,
+	public Herbivore(int dateNaissance,  Case emplacement,   boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance,emplacement, maturite,aProcree,meurtFaim);
 	}

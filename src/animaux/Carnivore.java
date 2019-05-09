@@ -33,7 +33,7 @@ public abstract class Carnivore extends Animal{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Carnivore(int dateNaissance, Case emplacement, int maturite,
+	public Carnivore(int dateNaissance, Case emplacement, boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance,emplacement, maturite,aProcree,meurtFaim);
 	}

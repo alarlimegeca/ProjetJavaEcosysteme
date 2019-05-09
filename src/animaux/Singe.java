@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-import Gestion.Gestionnaire;
+import gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
@@ -35,7 +35,7 @@ public class Singe extends Charognard{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Singe(int dateNaissance, Case emplacement, int maturite,
+	public Singe(int dateNaissance, Case emplacement, boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance, emplacement,  maturite,aProcree,meurtFaim);
 

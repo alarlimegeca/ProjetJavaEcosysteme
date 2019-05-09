@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-import Gestion.Gestionnaire;
+import gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
@@ -35,7 +35,7 @@ public class Loup extends Carnivore{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Loup(int dateNaissance, Case emplacement,  int maturite,
+	public Loup(int dateNaissance, Case emplacement,  boolean maturite,
 			boolean aProcree,int meurtFaim) {
 		super(dateNaissance, emplacement, maturite,aProcree,meurtFaim);
 
