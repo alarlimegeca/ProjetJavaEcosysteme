@@ -6,10 +6,19 @@ import ecosysteme.Grille;
 
 import javax.swing.JPanel;
 
+/** 
+ * Cette classe permet d'afficher la grille 
+ * @author Paul, Armand et Louise
+ *
+ */
 public class AffichageGrille extends JPanel {
 
 	private JPanel[] buttons;
 	
+	/**
+	 * Constrcuteur
+	 * @param grille : grille sous forme de matrice de int
+	 */
 	public AffichageGrille(Grille grille)  {
 		setLayout(new GridLayout(grille.getTaille(),grille.getTaille()));
 		buttons = new JPanel[(int)Math.pow(grille.getTaille(),2)];
