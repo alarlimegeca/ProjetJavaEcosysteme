@@ -35,10 +35,9 @@ public class Tigre extends Charognard{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Tigre(int dateNaissance,  Case emplacement,  int remplissageEstomac,  int maturite,
+	public Tigre(int dateNaissance,  Case emplacement,  int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance,emplacement, 
-				remplissageEstomac, maturite,aProcree,meurtFaim);
+		super(dateNaissance,emplacement,  maturite,aProcree,meurtFaim);
 		
 		// on donne un id à l'animal
 		this.id = Gestionnaire.getAnimaux().size() + 1;
@@ -101,7 +100,7 @@ public class Tigre extends Charognard{
 								this.setAProcree(true);											// 			la variable permettant de savoir si l'animal a procree devient true
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
-										Animal tigre = new Tigre (Gestionnaire.getTour(),cbis,  this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
+										Animal tigre = new Tigre (Gestionnaire.getTour(),cbis,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
 										Gestionnaire.addAnimal(tigre);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 

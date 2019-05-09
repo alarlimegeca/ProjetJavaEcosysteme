@@ -18,7 +18,6 @@ public abstract class Animal {
 	protected int vitesse;
 	private boolean estVivant;
 	private String espece;
-	public Color couleur;
 	protected int tailleEstomac;
 	private int remplissageEstomac;
 	protected int viande;
@@ -43,7 +42,7 @@ public abstract class Animal {
 	// il faut changer famine() de place dans les diagrammes de sequence
 	//ca ne sert à rien de faire des tests sur des animaux mort - Paul
 
-	public Animal(int dateNaissance,  Case emplacement,  int remplissageEstomac,  int maturite,
+	public Animal(int dateNaissance,  Case emplacement,  int maturite,
 			boolean aProcree,int meurtFaim) {
 
 		this.id = Gestionnaire.getAnimaux().size() + 1;
@@ -121,14 +120,6 @@ public abstract class Animal {
 
 	public void setEspece(String espece) {
 		this.espece = espece;
-	}
-
-	public Color getColor() {
-		return this.couleur;
-	}
-
-	public void setColor(Color couleur) {
-		this.couleur = couleur;
 	}
 
 	public int getTailleEstomac() {

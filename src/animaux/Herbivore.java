@@ -22,17 +22,15 @@ public abstract class Herbivore extends Animal{
 	 * @param vivant
 	 * @param espece
 	 * @param tailleEstomac
-	 * @param remplissageEstomac
 	 * @param viande
 	 * @param maturite
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
 
-	public Herbivore(int dateNaissance,  Case emplacement,  int remplissageEstomac,  int maturite,
+	public Herbivore(int dateNaissance,  Case emplacement,   int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance,emplacement,
-				remplissageEstomac, maturite,aProcree,meurtFaim);
+		super(dateNaissance,emplacement, maturite,aProcree,meurtFaim);
 	}
 
 	public void seNourrir(){

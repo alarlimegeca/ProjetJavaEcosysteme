@@ -36,10 +36,9 @@ public class Renard extends Carnivore{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Renard(int dateNaissance, Case emplacement,  int remplissageEstomac,  int maturite,
+	public Renard(int dateNaissance, Case emplacement,  int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance, emplacement,
-				remplissageEstomac, maturite, aProcree,meurtFaim);
+		super(dateNaissance, emplacement, maturite, aProcree,meurtFaim);
 
 		// on donne un id à l'animal
 		this.id = Gestionnaire.getAnimaux().size() + 1;
@@ -102,7 +101,7 @@ public class Renard extends Carnivore{
 								this.setAProcree(true);											// 			la variable permettant de savoir si l'animal a procree devient true
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
-										Animal renard = new Renard (Gestionnaire.getTour(),cbis, this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
+										Animal renard = new Renard (Gestionnaire.getTour(),cbis,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
 										Gestionnaire.addAnimal(renard);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 

@@ -33,10 +33,9 @@ public abstract class Carnivore extends Animal{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Carnivore(int dateNaissance, Case emplacement,  int remplissageEstomac,  int maturite,
+	public Carnivore(int dateNaissance, Case emplacement, int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance,emplacement, 
-				remplissageEstomac, maturite,aProcree,meurtFaim);
+		super(dateNaissance,emplacement, maturite,aProcree,meurtFaim);
 	}
 
 	public void seNourrir(){
