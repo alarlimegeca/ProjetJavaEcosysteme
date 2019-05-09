@@ -1,18 +1,23 @@
 package ecosysteme;
 
-
+/**
+ * Classe gérant l'écosystème de type Sybérie
+ * @author Paul,Armand et Louise
+ *
+ */
 public class Syberie extends Grille{
 
 	/**
 	 * Le constructeur de la classe, reutilisant le constructeur de la classe mere
-	 * @param taille
+	 * @param taille : taille d'un côté de la grille
 	 */
 	public Syberie(int taille) {
 		super(taille);
 	}
 
 	/**
-	 * Methode qui cree une repartition aleatoire de neige dans la grille, la neige va remplir 70% de la grille. Seule regle : lors de la generation de case neige, la neige ne peut pas aller sur de la neige deja presente
+	 * Methode qui cree une repartition aleatoire de neige dans la grille, la neige va remplir 70% de la grille. Seule regle : lors de la generation 
+	 * de case neige, la neige ne peut pas aller sur de la neige deja presente
 	 */
 	@Override
 	public void creationNeige() {
@@ -59,13 +64,11 @@ public class Syberie extends Grille{
 	
 	
 	/**
-	 * methode qui creer un cours d'eau avec plusieurs ramifications, crees independemments sous forme de troncons
+	 * methode qui crée un cours d'eau avec plusieurs ramifications, crees independemments sous forme de troncons
 	 */
 	@Override
 	public void creationEau() {
-	/**
-	* troncon 1
-	*/
+	//troncon 1
 	for(int x=(int)getTaille()/7;x<=(int)3*getTaille()/7;x++) {
 			int y=(int)getTaille()/4;
 			int[] coord = new int[2];
@@ -77,9 +80,7 @@ public class Syberie extends Grille{
 			getGrille().get(x).set(y+1, eau);
 			
 		}
-	/**
-	 * troncon 2
-	*/
+	//troncon 2
 	for(int x=(int)3*getTaille()/7-2;x<=(int)5*getTaille()/7;x++) {
 		int y=(int)getTaille()/4+3;
 		int[] coord = new int[2];
@@ -90,9 +91,7 @@ public class Syberie extends Grille{
 		getGrille().get(x).set(y, eau);
 		getGrille().get(x).set(y+1, eau);
 	}
-	/**
-	 * troncon 3
-	 */
+	//troncon 3
 	for(int y=(int)getTaille()/4+5;y<=(int)2*getTaille()/4;y++) {
 		int x=(int)5*getTaille()/7-1;
 		int[] coord = new int[2];
@@ -103,9 +102,7 @@ public class Syberie extends Grille{
 		getGrille().get(x).set(y, eau);
 		getGrille().get(x+1).set(y, eau);
 	}
-	/**
-	 * troncon 4
-	 */
+	// troncon 4
 	for(int x=(int)5*getTaille()/7-2;x<(int)getTaille();x++) {
 		int y=(int)2*getTaille()/4+2;
 		int[] coord = new int[2];
@@ -116,9 +113,7 @@ public class Syberie extends Grille{
 		getGrille().get(x).set(y, eau);
 		getGrille().get(x).set(y+1, eau);
 	}
-	/**
-	 * troncon 5
-	 */
+	// troncon 5
 	for(int y=(int)getTaille()/4+3;y<=(int)3*getTaille()/4;y++) {
 		int x=(int)getTaille()/2;
 		int[] coord = new int[2];
@@ -132,15 +127,11 @@ public class Syberie extends Grille{
 }
 	
 	/**
-	 * Quantitee de arbres l'ecosysteme Siberie ---> a mettre absolument dans une methode ??
-	 */
-	int arbre = (int)Math.pow(getTaille(),2)*70/(21*100);
-	
-	/**
 	 * Methode qui cree la grille avec ses composantes, l'ajout successif des sols suit un ordre bien precis
 	 */
 	@Override
 	public void creationGrille() {
+		int arbre = (int)Math.pow(getTaille(),2)*70/(21*100);
 		Syberie syberie = new Syberie(getTaille());
 		
 		syberie.creationMontagne();	

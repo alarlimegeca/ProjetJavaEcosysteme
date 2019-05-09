@@ -16,7 +16,7 @@ public class AffichageGrille extends JPanel {
 	private JPanel[] buttons;
 	
 	/**
-	 * Constrcuteur
+	 * Constructeur
 	 * @param grille : grille sous forme de matrice de int
 	 */
 	public AffichageGrille(Grille grille)  {

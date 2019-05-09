@@ -1,10 +1,15 @@
 package ecosysteme;
 
+/**
+ * Classe créant l'écosystème de type savane
+ * @author formation
+ *
+ */
 public class Savane extends Grille{
 
 	/**
 	 * Le constructeur de la classe, reutilisant le constructeur de la classe mere
-	 * @param taille
+	 * @param taille : taille d'un côté de la grille
 	 */
 	public Savane(int taille) {
 		super(taille);
@@ -60,24 +65,23 @@ public class Savane extends Grille{
 			
 	}
 	
+	/**
+	 * Méthode permettant de créer de la neige
+	 */
 	@Override
 	public void creationNeige() {
 		// TODO Auto-generated method stub
 		//		Methode vide car il n'y a pas de neige dans la savane
 	}
 
-
+	/**
+	 * Méthode permettant de créer de la montagne
+	 */
 	@Override
 	public void creationMontagne() {
 		// TODO Auto-generated method stub
 		//		Methode vide car il n'y a pas de montagne dans la savane
 	}
-	
-	/**
-	 * Quantitee de buissons et d'arbres dans l'ecosysteme Savane ---> a mettre absolument dans une methode ??
-	 */
-	int arbre = (int)Math.pow(getTaille(),2)*5/(21*100);
-	int buisson=(int)70*getTaille()/100;
 	
 	
 	/**
@@ -85,6 +89,8 @@ public class Savane extends Grille{
 	 */
 	@Override
 	public void creationGrille() {
+		int arbre = (int)Math.pow(getTaille(),2)*5/(21*100);
+		int buisson=(int)70*getTaille()/100;
 		Savane savane = new Savane(getTaille());
 		
 		savane.creationArbre(arbre);

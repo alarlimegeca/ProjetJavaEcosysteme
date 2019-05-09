@@ -1,5 +1,10 @@
 package ecosysteme;
 
+/**
+ * Méthode permettant de créer l'ecosystème de type MassifMontagneux
+ * @author Paul,Armand et Louise
+ *
+ */
 public class MassifMontagneux extends Grille{
 	
 	/**
@@ -154,18 +159,15 @@ public class MassifMontagneux extends Grille{
 		}
 	}
 	
-	/**
-	 * Quantitee de buissons et d'arbres dans l'ecosysteme MassifMontagneux ---> a mettre absolument dans une methode ??
-	 */
-	int arbre = (int)(Math.pow(getTaille(),2)*5/(21*100));
-	int buisson=(int)70*getTaille()/100;
+
 	
 	/**
 	 * Methode qui cree la grille avec ses composantes, l'ajout successif des sols suit un ordre bien precis
 	 */
 	@Override
 	public void creationGrille() {
-		
+		int arbre = (int)(Math.pow(getTaille(),2)*5/(21*100));
+		int buisson=(int)70*getTaille()/100;
 		MassifMontagneux massif = new MassifMontagneux(getTaille());
 		
 		massif.creationMontagne();	
