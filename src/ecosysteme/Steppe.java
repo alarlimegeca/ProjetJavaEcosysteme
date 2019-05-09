@@ -1,15 +1,10 @@
 package ecosysteme;
 
-/**
- * Classe créant l'ecosystème de type Steppe
- * @author Paul,Armand et Louise
- *
- */
 public class Steppe extends Grille{
 
 	/**
 	 * Le constructeur de la classe, reutilisant le constructeur de la classe mere
-	 * @param taille : taille d'un côté de la grille
+	 * @param taille
 	 */
 	public Steppe(int taille) {
 		super(taille);
@@ -17,8 +12,8 @@ public class Steppe extends Grille{
 
 	@Override
 	/**
-	 * methode qui cree des petits lacs. Le nombre de lacs dependant directement de la taille de la grille donc pas de parametres en entree.
-	 * Ces lacs sont de taille 3*3, repartis aleatoirement dans l'espace, ces lacs ne peuvent pas entierement se superposer.
+	 * methode qui creer des petits lacs. Le nombre de lacs dependant directement de la taille de la grille donc pas de parametres en entree.
+	 * Ces lacs sont de taille 3*3, repartits aleatoirement dans l'espace, ce lac ne peuvent pas entierement se superposer.
 	 */
 	public void creationEau() {
 		int i=0;
@@ -51,32 +46,29 @@ public class Steppe extends Grille{
 			i=i+1;
 		}
 	}
-	
-	/**
-	 * Méthode de création de neige
-	 */
+
 	@Override
 	public void creationNeige() {
 		// TODO Auto-generated method stub
 		//	Methode vide car il n'y a pas de neige dans la steppe
 	}
 
-	/**
-	 * Méthode de création de montagnes
-	 */
 	@Override
 	public void creationMontagne() {
 		// TODO Auto-generated method stub
 		//	Methode vide car il n'y a pas de montagne dans la steppe
 	}
 	
+	/**
+	 * Quantitee de buissons l'ecosysteme Steppe ---> a mettre absolument dans une methode ??
+	 */
+	int buisson = (int)Math.pow(getTaille(),2)*5/100;
 
 	/**
 	 * Methode qui cree la grille avec ses composantes, l'ajout successif des sols suit un ordre bien precis
 	 */
 	@Override
 	public void creationGrille() {
-		int buisson = (int)Math.pow(getTaille(),2)*5/100;
 		Steppe  steppe= new Steppe(getTaille());
 
 		steppe.creationBuisson(buisson);
