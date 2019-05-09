@@ -70,7 +70,7 @@ public class Gestionnaire {
 		};
 	String filename="tour_"+Integer.toString(tour);
 	writeToCsvFile(ListeNomAnimaux,";",filename);
-		Timer timer = new Timer(); timer.scheduleAtFixedRate(task, 0, 1000); ce bout de code sert à mettre un timer pour que le tour passe au suivant automatiquement
+		Timer timer = new Timer(); timer.scheduleAtFixedRate(task, 0, cadence); ce bout de code sert à mettre un timer pour que le tour passe au suivant automatiquement
 	}
 	
 /**
