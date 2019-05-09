@@ -11,8 +11,8 @@ import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 /**
- * 
- * @author formation
+ * Classe décrivant les vautours
+ * @author Paul,Armand et Louise
  *
  */
 

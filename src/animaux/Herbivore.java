@@ -1,17 +1,14 @@
 package animaux;
 
 import java.awt.Color;
-import java.util.ArrayList;
 
 import ecosysteme.Case;
 
-//import java.awt.Color;
 /**
- * 
- * @author formation
+ * Classe décrivant les herbivores
+ * @author Paul,Armand et Louise
  *
  */
-
 public abstract class Herbivore extends Animal{
 	/**
 	 * Constructeur

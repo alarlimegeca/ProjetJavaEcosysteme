@@ -1,7 +1,8 @@
 package animaux;
 
+import java.awt.Color;
+import java.io.File;
 import java.util.ArrayList;
-import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -9,12 +10,9 @@ import javax.swing.ImageIcon;
 import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
-
-import java.awt.Color;
-import java.io.File;
 /**
- * 
- * @author formation
+ * Classe décrivant les bouquetins
+ * @author Paul,Armand et Louise
  *
  */
 

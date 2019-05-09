@@ -3,7 +3,6 @@ package animaux;
 import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
@@ -13,11 +12,10 @@ import ecosysteme.Case;
 import ecosysteme.Grille;
 
 /**
- * 
- * @author formation
+ * Classe décrivant les loups
+ * @author Paul,Armand et Louise
  *
  */
-
 public class Loup extends Carnivore{
 	/**
 	 * Constructeur

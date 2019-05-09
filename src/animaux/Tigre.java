@@ -13,11 +13,10 @@ import ecosysteme.Case;
 import ecosysteme.Grille;
 
 /**
- * 
- * @author formation
+ * Classe décrivant les tigres
+ * @author Paul,Armand et Louise
  *
  */
-
 
 public class Tigre extends Charognard{
 	/**

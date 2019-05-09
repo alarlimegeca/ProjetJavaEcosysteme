@@ -2,18 +2,16 @@ package animaux;
 
 import java.awt.Color;
 import java.util.ArrayList;
-import java.util.Random;
 
 import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
 /**
- * 
- * @author formation
+ * Classe décrivant les crocodiles
+ * @author Paul,Armand et Louise
  *
  */
-
 public class Crocodile extends Carnivore{
 	/**
 	 * Constructeur

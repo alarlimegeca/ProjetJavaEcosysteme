@@ -1,14 +1,16 @@
 package animaux;
 
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.stream.IntStream;
 
 import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
-
+/**
+ * Classe décrivant les animaux
+ * @author Paul,Armand et Louise
+ *
+ */
 
 public abstract class Animal {
 	int id;
