@@ -2,6 +2,12 @@ package ecosysteme;
 
 import Gestion.Gestionnaire;
 
+
+/** 
+ * Cette classe gère les cases de type herbe
+ * @author Paul,Armand et Louise
+ *
+ */
 public class Herbe extends Case{
 	
 	/**
@@ -11,12 +17,20 @@ public class Herbe extends Case{
 
 	/**
 	 * Constructeur
+	 * @param position : position de la case
 	 */
 	public Herbe(int[] position) {
 		super(0, true, false, position);
 		this.nourriture=10;
 	}
 	
+	/**
+	 * Constructeur
+	 * @param typeOccupation : le type d'occupation (ici Arbre)
+	 * @param estvide : Y a t'il un animal sur la case ?
+	 * @param cadavre : Y a t'il un cadavre sur la case
+	 * @param position : position de la case
+	 */
 	public Herbe(int typeOccupation, boolean estvide, boolean cadavre, int[] position) {
 		super(0, estvide, cadavre, position);
 		this.nourriture=10;
@@ -61,13 +75,11 @@ public class Herbe extends Case{
 		}
 	}
 	
+	/**
+	 * getter
+	 */
 	public int getTypeOccupation() {
 		return 0;
 	}
 	
 }
-/*
- public void afficher() {
-	 System.out.println(nourriture);
- }
-*/
