@@ -31,9 +31,9 @@ public abstract class Herbivore extends Animal{
 	 */
 
 	public Herbivore(int dateNaissance,  Case emplacement, 
-			int tpDecomposition,  Color couleur, int remplissageEstomac,  int maturite,
+			int tpDecomposition,  int remplissageEstomac,  int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance,emplacement,tpDecomposition,couleur, 
+		super(dateNaissance,emplacement,tpDecomposition,
 				remplissageEstomac, maturite,aProcree,meurtFaim);
 	}
 

@@ -1,12 +1,10 @@
 package animaux;
 
 import java.awt.Color;
-import java.util.ArrayList;
-import java.util.stream.IntStream;
 
+import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
-import gestion.Gestionnaire;
 
 
 
@@ -37,7 +35,6 @@ public abstract class Animal {
 	 * @param dateDeces : int numéro du tour où l'animal décède (change chaque tour jusqu'à sa mort)
 	 * @param emplacement : objet de type Case sur laquelle se trouve l'animal
 	 * @param tpDecomposition : int temps que l'animal met à disparaitre après sa mort. Laisse du temps aux charognards pour manger le cadavre
-	 * @param couleur : Color couleur de l'animal sur la carte
 	 * @param remplissageEstomac : int définit l'appétit de l'animal. plus ce nombre est faible plus l'animal aura besoin de nourriture ce nombre décroit chaque tour
 	 * @param maturite : définit l'age auquel l'animal est assez grand pour se reproduire
 	 * @param aProcree : si l'animal a procréé récemment 
@@ -49,7 +46,7 @@ public abstract class Animal {
 	//ca ne sert à rien de faire des tests sur des animaux mort - Paul
 
 	public Animal(int dateNaissance,  Case emplacement,
-			int tpDecomposition,  Color couleur, int remplissageEstomac,  int maturite,
+			int tpDecomposition,  int remplissageEstomac,  int maturite,
 			boolean aProcree,int meurtFaim) {
 
 		this.id = Gestionnaire.getAnimaux().size() + 1;
@@ -57,7 +54,6 @@ public abstract class Animal {
 		this.emplacement = emplacement;
 		this.estVivant = true;
 		this.tpDecomposition = tpDecomposition;
-		this.couleur = couleur;
 		this.remplissageEstomac = tailleEstomac/2 % 1;
 		this.maturite = maturite;
 		this.aProcree = aProcree;

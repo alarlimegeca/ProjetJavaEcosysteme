@@ -31,9 +31,9 @@ public class Condor extends Charognard{
 	 * @param meurtFaim
 	 */
 	public Condor(int dateNaissance, Case emplacement,
-			int tpDecomposition,  Color couleur, int remplissageEstomac,  int maturite,
+			int tpDecomposition, int remplissageEstomac,  int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance, emplacement, tpDecomposition,couleur,
+		super(dateNaissance, emplacement, tpDecomposition,
 				remplissageEstomac, maturite,aProcree,meurtFaim);
 
 		// on donne un id à l'animal
@@ -91,7 +91,7 @@ public class Condor extends Charognard{
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
 										Animal condor = new Condor (Gestionnaire.getTour(),cbis,
-												this.getTempsDecomposition(),  this.couleur, this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
+												this.getTempsDecomposition(),  this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
 										Gestionnaire.addAnimal(condor);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 
