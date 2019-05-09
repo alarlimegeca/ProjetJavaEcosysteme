@@ -3,19 +3,21 @@ package animaux;
 import java.awt.Color;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
+import gestion.Gestionnaire;
 
 /**
- * Classe décrivant les vautours
- * @author Paul,Armand et Louise
+ * 
+ * @author formation
  *
  */
+
 public class Renard extends Carnivore{
 	/**
 	 * Constructeur
@@ -102,10 +104,10 @@ public class Renard extends Carnivore{
 								this.setAProcree(true);											// 			la variable permettant de savoir si l'animal a procree devient true
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
-										Animal vautour = new Vautour (Gestionnaire.getTour(),cbis,
+										Animal renard = new Renard (Gestionnaire.getTour(),cbis,
 												this.getTempsDecomposition(),  this.couleur, this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
-										Gestionnaire.addAnimal(vautour);								//			on ajoute l'animal au gestionnaire
+										Gestionnaire.addAnimal(renard);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 
 									}
 								}

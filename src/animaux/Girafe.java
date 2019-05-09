@@ -2,14 +2,15 @@ package animaux;
 
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Random;
 
-import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
+import gestion.Gestionnaire;
 
 /**
- * Classe décrivant les girafes
- * @author Paul,Armand et Louise
+ * 
+ * @author formation
  *
  */
 
@@ -91,10 +92,10 @@ public class Girafe extends Herbivore{
 								this.setAProcree(true);											// 			la variable permettant de savoir si l'animal a procree devient true
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
-										Animal tigre = new Tigre (Gestionnaire.getTour(),cbis,
+										Animal girafe = new Girafe (Gestionnaire.getTour(),cbis,
 												this.getTempsDecomposition(),  this.couleur, this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
-										Gestionnaire.addAnimal(tigre);								//			on ajoute l'animal au gestionnaire
+										Gestionnaire.addAnimal(girafe);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 
 									}
 								}

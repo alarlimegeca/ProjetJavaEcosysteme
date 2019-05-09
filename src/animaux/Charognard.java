@@ -1,12 +1,15 @@
 package animaux;
 import java.awt.Color;
+import java.util.ArrayList;
 
 import ecosysteme.Case;
+import ecosysteme.Grille;
 /**
- * Classe décrivant les charognards
- * @author Paul,Armand et Louise
+ * 
+ * @author formation
  *
  */
+
 public abstract class Charognard extends Animal {
 	/**
 	 * Constructeur

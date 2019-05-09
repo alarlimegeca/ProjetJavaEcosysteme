@@ -1,16 +1,14 @@
 package animaux;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.stream.IntStream;
 
-import Gestion.Gestionnaire;
 import ecosysteme.Case;
 import ecosysteme.Grille;
+import gestion.Gestionnaire;
 
-/**
- * Classe décrivant les animaux
- * @author Paul,Armand et Louise
- *
- */
+
 
 public abstract class Animal {
 	int id;
@@ -223,8 +221,10 @@ public abstract class Animal {
 		if (direction==1) {
 			Case caseSuivante = Grille.getCase(this.getEmplacement().getX() - this.vitesse,this.getEmplacement().getY() + this.vitesse);		//		on définit ce qui sera la prochaine case
 			if (caseSuivante.getEstVide() == true) {				//		si la case est vide
-				this.setEmplacement(caseSuivante);				// 		on y va
-				caseSuivante.setEstVide(false);					//		la case n'est plus vide
+				if (caseSuivante.getTypeOccupation() != 2) {
+					this.setEmplacement(caseSuivante);				//		on y va
+					caseSuivante.setEstVide(false);					//		la case n'est plus vide
+					}					
 			} else {
 				this.seDeplacer();								//		si la case n'est pas vide on recommence
 			}
@@ -234,8 +234,10 @@ public abstract class Animal {
 			int nouveauY = this.getEmplacement().getY() + this.vitesse;
 			Case caseSuivante = Grille.getCase(nouveauX,nouveauY);
 			if (caseSuivante.getEstVide() == true) {
-				this.setEmplacement(caseSuivante);
-				caseSuivante.setEstVide(false);
+				if (caseSuivante.getTypeOccupation() != 2) {
+					this.setEmplacement(caseSuivante);
+					caseSuivante.setEstVide(false);
+					}
 			} else {
 				this.seDeplacer();
 			}
@@ -244,9 +246,10 @@ public abstract class Animal {
 		if(direction==3) {
 			Case caseSuivante = Grille.getCase(this.getEmplacement().getX()+this.vitesse,this.getEmplacement().getY()+this.vitesse);
 			if (caseSuivante.getEstVide() == true) {
+				if (caseSuivante.getTypeOccupation() != 2) {
 				this.setEmplacement(caseSuivante);
-
 				caseSuivante.setEstVide(false);
+				}
 			} else {
 				this.seDeplacer();
 			}
@@ -255,15 +258,21 @@ public abstract class Animal {
 		if(direction==4) {
 			Case caseSuivante = Grille.getCase(this.getEmplacement().getX()-this.vitesse,this.getEmplacement().getY());
 			if (caseSuivante.getEstVide() == true) {
-				this.setEmplacement(caseSuivante);
-				caseSuivante.setEstVide(false);
+				if (caseSuivante.getTypeOccupation() != 2) {
+					this.setEmplacement(caseSuivante);
+					caseSuivante.setEstVide(false);
+					}
+			}else {
+				this.seDeplacer();
 			}
 		}
 		if(direction==5) {
 			Case caseSuivante = Grille.getCase(this.getEmplacement().getX()+this.vitesse,this.getEmplacement().getY());
 			if (caseSuivante.getEstVide() == true) {
-				this.setEmplacement(caseSuivante);
-				caseSuivante.setEstVide(false);
+				if (caseSuivante.getTypeOccupation() != 2) {
+					this.setEmplacement(caseSuivante);
+					caseSuivante.setEstVide(false);
+					}
 			} else {
 				this.seDeplacer();
 			}
@@ -272,8 +281,10 @@ public abstract class Animal {
 		if (direction==6) {
 			Case caseSuivante = Grille.getCase(this.getEmplacement().getX()-this.vitesse,this.getEmplacement().getY()-this.vitesse);
 			if (caseSuivante.getEstVide() == true) {
-				this.setEmplacement(caseSuivante);
-				caseSuivante.setEstVide(false);
+				if (caseSuivante.getTypeOccupation() != 2) {
+					this.setEmplacement(caseSuivante);
+					caseSuivante.setEstVide(false);
+					}
 			} else {
 				this.seDeplacer();
 			}
@@ -282,8 +293,10 @@ public abstract class Animal {
 		if(direction==7) {
 			Case caseSuivante = Grille.getCase(this.getEmplacement().getX(),this.getEmplacement().getY()-this.vitesse);
 			if (caseSuivante.getEstVide() == true) {
-				this.setEmplacement(caseSuivante);
-				caseSuivante.setEstVide(false);
+				if (caseSuivante.getTypeOccupation() != 2) {
+					this.setEmplacement(caseSuivante);
+					caseSuivante.setEstVide(false);
+					}
 			} else {
 				this.seDeplacer();
 			}
@@ -291,8 +304,10 @@ public abstract class Animal {
 		
 		Case caseSuivante = Grille.getCase(this.getEmplacement().getX()+this.vitesse,this.getEmplacement().getY()-this.vitesse);
 		if (caseSuivante.getEstVide() == true) {
-			this.setEmplacement(caseSuivante);
-			caseSuivante.setEstVide(false);
+			if (caseSuivante.getTypeOccupation() != 2) {
+				this.setEmplacement(caseSuivante);
+				caseSuivante.setEstVide(false);
+				}
 			
 			Grille.getCase(caseSuivante.getPosition()[0],caseSuivante.getPosition()[1]);
 		

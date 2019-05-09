@@ -10,11 +10,6 @@ import java.util.ArrayList;
 import ecosysteme.Case;
 import ecosysteme.Grille;
 
-/**
- * Classe décrivant les carnivores
- * @author Paul,Armand et Louise
- *
- */
 public abstract class Carnivore extends Animal{
 	/**
 	 * Constructeur
