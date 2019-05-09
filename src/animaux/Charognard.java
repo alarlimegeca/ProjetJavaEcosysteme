@@ -18,7 +18,6 @@ public abstract class Charognard extends Animal {
 	 * @param esperanceVie
 	 * @param vitesse
 	 * @param vivant
-	 * @param tpDecomposition
 	 * @param espece
 	 * @param tailleEstomac
 	 * @param remplissageEstomac
@@ -27,10 +26,9 @@ public abstract class Charognard extends Animal {
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Charognard(int dateNaissance, Case emplacement,  
-			int tpDecomposition,   int remplissageEstomac,  int maturite,
+	public Charognard(int dateNaissance, Case emplacement,    int remplissageEstomac,  int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance,emplacement,tpDecomposition,
+		super(dateNaissance,emplacement,
 				remplissageEstomac, maturite,aProcree,meurtFaim);
 	}
 

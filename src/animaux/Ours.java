@@ -27,7 +27,6 @@ public class Ours extends Carnivore{
 	 * @param esperanceVie
 	 * @param vitesse
 	 * @param vivant
-	 * @param tpDecomposition
 	 * @param espece
 	 * @param tailleEstomac
 	 * @param remplissageEstomac
@@ -36,10 +35,9 @@ public class Ours extends Carnivore{
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Ours(int dateNaissance, Case emplacement, 
-			int tpDecomposition, int remplissageEstomac,  int maturite,
+	public Ours(int dateNaissance, Case emplacement,  int remplissageEstomac,  int maturite,
 			boolean aProcree,int meurtFaim) {
-		super(dateNaissance, emplacement, tpDecomposition, 
+		super(dateNaissance, emplacement, 
 				remplissageEstomac, maturite,aProcree,meurtFaim);
 
 		// on donne un id à l'animal
@@ -103,8 +101,7 @@ public class Ours extends Carnivore{
 								this.setAProcree(true);											// 			la variable permettant de savoir si l'animal a procree devient true
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
-										Animal ours = new Ours (Gestionnaire.getTour(),cbis,
-												this.getTempsDecomposition(),   this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
+										Animal ours = new Ours (Gestionnaire.getTour(),cbis,  this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
 										Gestionnaire.addAnimal(ours);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 

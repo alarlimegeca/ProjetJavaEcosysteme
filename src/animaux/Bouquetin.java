@@ -31,12 +31,10 @@ public class Bouquetin extends Herbivore {
 	 * @param aProcree
 	 * @param meurtFaim
 	 */
-	public Bouquetin(int dateNaissance, Case emplacement,
-			int tpDecomposition,   int remplissageEstomac,  int maturite,
+	public Bouquetin(int dateNaissance, Case emplacement,   int remplissageEstomac,  int maturite,
 			boolean aProcree,int meurtFaim) {
 
-		super(dateNaissance, emplacement, tpDecomposition,
-				remplissageEstomac, maturite,aProcree,meurtFaim);
+		super(dateNaissance, emplacement, remplissageEstomac, maturite,aProcree,meurtFaim);
 
 		// on ajoute un id à l'animal
 		this.id = Gestionnaire.getAnimaux().size() + 1;
@@ -100,8 +98,7 @@ public class Bouquetin extends Herbivore {
 								this.setAProcree(true);											// 			la variable permettant de savoir si l'animal a procree devient true
 								for (Case cbis : cases){											// 			on cherche ensuite  
 									if (c.getEstVide() == true) {									//			une case vide 
-										Animal bouquetin = new Bouquetin (Gestionnaire.getTour(),cbis,
-												this.getTempsDecomposition(), this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
+										Animal bouquetin = new Bouquetin (Gestionnaire.getTour(),cbis,this.tailleEstomac/2,  this.getMaturite(),	// pour créer un nouvel individu
 												this.getAProcree(),this.getMeurtFaim());
 										Gestionnaire.addAnimal(bouquetin);								//			on ajoute l'animal au gestionnaire
 										break;														//			l'animal se reproduit et arrête de vérifier 
